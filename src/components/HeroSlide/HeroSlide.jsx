@@ -7,7 +7,7 @@ export default function HeroSlide() {
     const [movieItems, setMovieItems] = useState([]);
 
     useEffect(() => {
-        async function getMovies() {
+        const getMovies = async () => {
             const params = { page: 1 };
             try {
                 const response = await tmdbApi.getMoviesList(movieType.popular, { params });
